@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TourFirm_9LAB", "TourFirm_9LAB\", "{F7B626F6-1401-4BE9-9BB1-9EAF24FAA2EB}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50524"
+		Debug.AspNetCompiler.PhysicalPath = "TourFirm_9LAB\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50524\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50524"
+		Release.AspNetCompiler.PhysicalPath = "TourFirm_9LAB\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50524\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50524"
+		SlnRelativePath = "TourFirm_9LAB\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7B626F6-1401-4BE9-9BB1-9EAF24FAA2EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B626F6-1401-4BE9-9BB1-9EAF24FAA2EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {612F99BC-B7FA-4312-9C61-BE3793FC1F06}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Touristic" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-5TQ1HVS;Initial Catalog=Touristic;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TouristicConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Departure" Member="Departure">
+    <Type Name="Departure">
+      <Column Name="departutre_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="departure_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Departure_Routes" Member="Routes" ThisKey="departutre_id" OtherKey="departure_id" Type="Routes" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Destination" Member="Destination">
+    <Type Name="Destination">
+      <Column Name="destination_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="destination_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sights_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Destination_Routes" Member="Routes" ThisKey="destination_id" OtherKey="destination_id" Type="Routes" />
+      <Association Name="Destination_Sights" Member="Sights1" ThisKey="destination_id" OtherKey="city_id" Type="Sights" />
+      <Association Name="Sights_Destination" Member="Sights" ThisKey="sights_id" OtherKey="sight_id" Type="Sights" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Routes" Member="Routes">
+    <Type Name="Routes">
+      <Column Name="route_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="route_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="departure_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="destination_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="sights_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="flight" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="Departure_Routes" Member="Departure" ThisKey="departure_id" OtherKey="departutre_id" Type="Departure" IsForeignKey="true" />
+      <Association Name="Destination_Routes" Member="Destination" ThisKey="destination_id" OtherKey="destination_id" Type="Destination" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sights" Member="Sights">
+    <Type Name="Sights">
+      <Column Name="sight_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sight_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="city_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Sights_Destination" Member="Destination" ThisKey="sight_id" OtherKey="sights_id" Type="Destination" />
+      <Association Name="Destination_Sights" Member="Destination1" ThisKey="city_id" OtherKey="destination_id" Type="Destination" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

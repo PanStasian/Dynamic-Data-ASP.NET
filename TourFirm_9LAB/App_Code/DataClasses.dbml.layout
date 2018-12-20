@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses">
+  <DataContextMoniker Name="/DataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9517e9c6-7e15-40e9-b2b5-aa4c81260c96" absoluteBounds="0.75, 1.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataClassesDataContext/Departure" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea743777-eab1-4ec9-8ed6-14ad89449ce5" absoluteBounds="0.765, 2.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b751752c-a0a1-4755-aa7a-70d6f8bd6755" absoluteBounds="0.75, 4.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClassesDataContext/Destination" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f37f477-58b7-4278-91f6-74766142106e" absoluteBounds="0.765, 4.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5cb451e-d038-4e9c-bb94-90419f5bc77a" absoluteBounds="3.5, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataClassesDataContext/Routes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1a8ec99-8a34-435e-847f-9997ca746357" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="96d761c2-af70-49c1-9253-ab915704fda2" absoluteBounds="3.5, 4, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDataContext/Sights" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03991a65-d778-4f3a-88db-f722fd849f00" absoluteBounds="3.515, 4.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.32774983723958); (3.04166666666667 : 2.32774983723958 : JumpStart); (3.20833333333333 : 2.32774983723958 : JumpEnd); (3.5 : 2.32774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/Departure/Departure_Routes" />
+      <nodes>
+        <classShapeMoniker Id="9517e9c6-7e15-40e9-b2b5-aa4c81260c96" />
+        <classShapeMoniker Id="f5cb451e-d038-4e9c-bb94-90419f5bc77a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.125); (3.125 : 3.75); (3.125 : 1.50762291861979); (3.5 : 1.50762291861979)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/Destination/Destination_Routes" />
+      <nodes>
+        <classShapeMoniker Id="b751752c-a0a1-4755-aa7a-70d6f8bd6755" />
+        <classShapeMoniker Id="f5cb451e-d038-4e9c-bb94-90419f5bc77a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 4.84939947265625); (2.75 : 4.84939947265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/Sights/Sights_Destination" />
+      <nodes>
+        <classShapeMoniker Id="96d761c2-af70-49c1-9253-ab915704fda2" />
+        <classShapeMoniker Id="b751752c-a0a1-4755-aa7a-70d6f8bd6755" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.45595223632813); (3.5 : 4.45595223632813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/Destination/Destination_Sights" />
+      <nodes>
+        <classShapeMoniker Id="b751752c-a0a1-4755-aa7a-70d6f8bd6755" />
+        <classShapeMoniker Id="96d761c2-af70-49c1-9253-ab915704fda2" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
